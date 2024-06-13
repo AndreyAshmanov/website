@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('educational_programm_of_the_university', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->boolean('Форма обучения');
+            $table->boolean('Стоимость/бюджет');
+            $table->int('Бюджетные места');
+            $table->int('Количество платных мест');
+            $table->int('Блюджетные места_Id');
+            $table->int('Привязка Прог/напр_Id программы');
+            $table->int('Привязка Прог/напр_id направления');
+            $table->int('Привязка про/ экз_Id программы');
+            $table->int('Привязка про/ экз_Id экзамена');
         });
     }
 

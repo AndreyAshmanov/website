@@ -20,7 +20,7 @@ return new class extends Migration
             $table->int('Средний балл для поступления');
             $table->int('Площадки колледжей_Id');
             $table->int('Блюджетные места_Id1');
-            $table->int('Форма обучения_Id ');
+            $table->int('Форма обучения_Id');
             $table->int('Площадки колледжей_Id1');
             $table->int('Привязка Прог/напр_Id программы');
             $table->int('Привязка Прог/напр_id направления');
