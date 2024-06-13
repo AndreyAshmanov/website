@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_pro_ex', function (Blueprint $table) {
-            $table->int('id программы');
-            $table->int('id экзамена');
+            $table->integer('id программы');
+            $table->integer('id экзамена');
         });
     }
 
