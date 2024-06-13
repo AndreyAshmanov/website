@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_program_to_the_direction', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->int('id программы');
+            $table->int('id направления');
         });
     }
 

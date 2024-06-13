@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('linking_the_program_to_the_exam', function (Blueprint $table) {
             $table->int('id программы');
             $table->int('id экзамена');
-            $table->int('Образовательная программа вуза_id');
+            $table->int('Образовательная программа вуза_Id');
         });
     }
 
