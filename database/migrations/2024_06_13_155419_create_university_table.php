@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('university', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('Название', 45);
+            $table->string('Адрес');
+            $table->int('Рейтинг');
+            $table->string('Описание', 150);
+            $table->int('Привязка вуза к площадке_Id вуза');
+            $table->int('Привязка вуза к площадке_Id площадки');
         });
     }
 
