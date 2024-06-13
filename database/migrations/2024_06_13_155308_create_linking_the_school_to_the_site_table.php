@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_school_to_the_site', function (Blueprint $table) {
-            $table->int('id школы');
-            $table->int('id площадки');
+            $table->integer('id школы');
+            $table->integer('id площадки');
         });
     }
 
