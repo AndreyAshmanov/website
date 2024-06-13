@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('exam', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('Предмет', 45);
+            $table->int('Проходной балл');
+            $table->int('Минимальный балл');
+            $table->boolean('Можно ли сдавать внутренний экзамен')->default(true);
+            $table->;
+            $table->;
         });
     }
 
