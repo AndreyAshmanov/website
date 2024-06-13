@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('Адрес', 45);
             $table->int('Рейтинг');
             $table->string('Описание', 150);
-            $table->int('Рейтинг');;
-            $table->int('Рейтинг');;
+            $table->int('Привязка школы к площадке_Id школы');
+            $table->int('Привязка школы к площадке_Id площадки')
         });
     }
 
