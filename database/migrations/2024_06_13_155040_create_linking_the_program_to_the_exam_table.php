@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_program_to_the_exam', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->int('id программы');
+            $table->int('id экзамена');
+            $table->int('Образовательная программа вуза_id');
         });
     }
 
