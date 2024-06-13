@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('direction_of_study', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('Название', 45);
+            $table->int('Срок обучения (лет)');
+            $table->int('Привязка Прог/напр_Id программы');
+            $table->int('Привязка Прог/напр_id направления');
         });
     }
 
