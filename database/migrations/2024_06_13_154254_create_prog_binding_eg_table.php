@@ -16,7 +16,7 @@ return new class extends Migration
             $table->increments('id направления');
             $table->int('id программы');
             $table->int('id экзамена');
-            $table->int('Образовательная программа вуза_Id');
+            $table->int('Образовательная программа вуза_Id ');
         });
     }
 
