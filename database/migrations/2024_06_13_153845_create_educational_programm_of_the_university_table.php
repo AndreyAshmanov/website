@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->boolean('Форма обучения');
             $table->boolean('Стоимость/бюджет');
-            $table->int('Бюджетные места');
-            $table->int('Количество платных мест');
-            $table->int('Блюджетные места_Id');
-            $table->int('Привязка Прог/напр_Id программы');
-            $table->int('Привязка Прог/напр_id направления');
-            $table->int('Привязка про/ экз_Id программы');
-            $table->int('Привязка про/ экз_Id экзамена');
+            $table->integer('Бюджетные места');
+            $table->integer('Количество платных мест');
+            $table->integer('Блюджетные места_Id');
+            $table->integer('Привязка Прог/напр_Id программы');
+            $table->integer('Привязка Прог/напр_id направления');
+            $table->integer('Привязка про/ экз_Id программы');
+            $table->integer('Привязка про/ экз_Id экзамена');
         });
     }
 
