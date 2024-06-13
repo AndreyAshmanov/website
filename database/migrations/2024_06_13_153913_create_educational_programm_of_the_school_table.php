@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->boolean('Форма обучения');
             $table->boolean('Платная/бесплатная');
-            $table->int('Стоимость');
-            $table->int('Количество мест');
-            $table->int('Площадки школ_Id');
-            $table->int('Форма обучения_Id');
+            $table->integer('Стоимость');
+            $table->integer('Количество мест');
+            $table->integer('Площадки школ_Id');
+            $table->integer('Форма обучения_Id');
         });
     }
 
