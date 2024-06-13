@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('_prog_binding_eg', function (Blueprint $table) {
             $table->increments('Id программы');
             $table->increments('id направления');
+            $table->int('id программы');
+            $table->int('id экзамена');
+            $table->int('Образовательная программа вуза_Id');
         });
     }
 
