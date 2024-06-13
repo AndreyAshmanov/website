@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             $table->boolean('Форма обучения');
             $table->boolean('Стоимость/бюджет');
-            $table->int('Бюджетные места');
-            $table->int('Количество платных мест');
-            $table->int('Средний балл для поступления');
-            $table->int('Площадки колледжей_Id');
-            $table->int('Блюджетные места_Id1');
-            $table->int('Форма обучения_Id');
-            $table->int('Площадки колледжей_Id1');
-            $table->int('Привязка Прог/напр_Id программы');
-            $table->int('Привязка Прог/напр_id направления');
+            $table->integer('Бюджетные места');
+            $table->integer('Количество платных мест');
+            $table->integer('Средний балл для поступления');
+            $table->integer('Площадки колледжей_Id');
+            $table->integer('Блюджетные места_Id1');
+            $table->integer('Форма обучения_Id');
+            $table->integer('Площадки колледжей_Id1');
+            $table->integer('Привязка Прог/напр_Id программы');
+            $table->integer('Привязка Прог/напр_id направления');
         });
     }
 
