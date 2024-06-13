@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('Название', 45);
             $table->string('Адрес', 45);
-            $table->int('Рейтинг');
+            $table->integer('Рейтинг');
             $table->string('Описание', 150);
-            $table->int('Привязка вуза к площадке_Id вуза');
-            $table->int('Привязка вуза к площадке_Id площадки');
+            $table->integer('Привязка вуза к площадке_Id вуза');
+            $table->integer('Привязка вуза к площадке_Id площадки');
         });
     }
 
