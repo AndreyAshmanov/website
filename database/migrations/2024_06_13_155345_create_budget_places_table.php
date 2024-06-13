@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('budget_places', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->int('Присутвуют');
+            $table->int('Отсутвуют');
         });
     }
 
