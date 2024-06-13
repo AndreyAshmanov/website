@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('_prog_binding_eg', function (Blueprint $table) {
-            $table->iв('id программы');
+            $table->id('id программы');
             $table->increments('id направления');
             $table->integer('id программы');
             $table->integer('id экзамена');
