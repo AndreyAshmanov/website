@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_program_to_the_direction', function (Blueprint $table) {
-            $table->int('Id программы');
+            $table->int('id программы');
             $table->int('id направления');
         });
     }
