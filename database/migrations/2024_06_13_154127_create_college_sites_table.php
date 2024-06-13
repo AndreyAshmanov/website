@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('college_sites', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('Название', 45);
+            $table->int('Привязка вуза к площадке_Id вуза');
+            $table->int('Привязка вуза к площадке_Id площадки');
         });
     }
 
