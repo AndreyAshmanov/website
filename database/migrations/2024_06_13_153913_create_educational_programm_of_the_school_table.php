@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('educational_programm_of_the_school', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->boolean('Форма обучения');
+            $table->boolean('Платная/бесплатная');
+            $table->int('Стоимость');
+            $table->int('Количество мест');
+            $table->int('Площадки школ_Id');
+            $table->int('Форма обучения_Id');
         });
     }
 
