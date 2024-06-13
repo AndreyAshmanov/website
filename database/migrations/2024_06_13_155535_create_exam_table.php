@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('exam', function (Blueprint $table) {
             $table->id();
             $table->string('Предмет', 45);
-            $table->int('Проходной балл');
-            $table->int('Минимальный балл');
+            $table->integer('Проходной балл');
+            $table->integer('Минимальный балл');
             $table->boolean('Можно ли сдавать внутренний экзамен')->default(true);
-            $table->int('Привязка программы к экзамену_Id программы');
-            $table->int('Привязка программы к экзамену_Id экзамена');
+            $table->integer('Привязка программы к экзамену_Id программы');
+            $table->integer('Привязка программы к экзамену_Id экзамена');
         });
     }
 
