@@ -17,8 +17,8 @@ return new class extends Migration
             $table->int('Проходной балл');
             $table->int('Минимальный балл');
             $table->boolean('Можно ли сдавать внутренний экзамен')->default(true);
-            $table->
-            $table->timestamps();
+            $table->;
+            $table->;
         });
     }
 
