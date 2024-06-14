@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('college', function (Blueprint $table) {
-            $table->id()->primary();
-            $table->string('name', 45);
-            $table->string('Address', 45);
-            $table->integer('Rating');
+            $table->id()->primary()->index();
+            $table->string('name', 45)->index();
+            $table->string('Address', 45)->index();
+            $table->integer('Rating')->index();
             $table->string('Description', 150);
-            $table->integer('Linking_the_university_to_the_site_of_the_university');
-            $table->integer('Linking_the_university_to_the_site_ID_of_the_site');
+            $table->integer('Linking_the_university_to_the_site_of_the_university')->index();
+            $table->integer('Linking_the_university_to_the_site_ID_of_the_site')->index();
         });
     }
 
