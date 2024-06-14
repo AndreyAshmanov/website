@@ -18,10 +18,10 @@ return new class extends Migration
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
             $table->integer('Budget_place_Id')->index();
-            $table->integer('LinkingProg/eg_ID_of_program')->index();
+            $table->integer('LinkingProg/eg_ID_program')->index();
             $table->integer('BindingProg/eg_ID_direction')->index();
-            $table->integer('LinkingProg/EX_ID_of_program')->index();
-            $table->integer('LinkingProg/EX_ID_of_exam')->index();
+            $table->integer('LinkingProg/EX_ID_program')->index();
+            $table->integer('LinkingProg/EX_ID_exam')->index();
         });
     }
 
