@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('college', function (Blueprint $table) {
             $table->id()->index();
-            $table->string('name', 45)->index()
+            $table->string('name', 45)->index();
             $table->string('Address', 45)->index();
             $table->integer('Rating')->index();
             $table->string('Description', 150);
