@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('school_sites', function (Blueprint $table) {
             $table->id();
-            $table->string('Название', 45);
-            $table->integer('Привязка вуза к площадке_Id школы');
-            $table->integer('Привязка вуза к площадке_Id площадки');
+            $table->string('name', 45);
+            $table->integer('Linking_the_university_to_the_school_id_site');
+            $table->integer('Linking_the_university_to_the_site_ID_of_the_site');
         });
     }
 
