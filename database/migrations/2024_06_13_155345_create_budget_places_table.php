@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('budget_places', function (Blueprint $table) {
             $table->id();
-            $table->integer('Присутствуют');
-            $table->integer('Отсутствуют');
+            $table->integer('Present');
+            $table->integer('Missing');
         });
     }
 
