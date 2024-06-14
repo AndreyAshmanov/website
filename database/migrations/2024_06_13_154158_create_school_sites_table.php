@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('school_sites', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
             $table->string('name', 45);
-            $table->integer('Linking_university_school_ID_site');
-            $table->integer('Linking_university_site_ID_site');
+            $table->integer('Linking_university_school_ID_site')->index();
+            $table->integer('Linking_university_site_ID_site')->index();
         });
     }
 
