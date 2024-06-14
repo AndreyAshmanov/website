@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('direction_of_study', function (Blueprint $table) {
-            $table->id()->index();
+            $table->id()->index()
             $table->string('name', 45);
             $table->integer('Duration of study (years)');
             $table->integer('LinkingProg/EG_ID_program')->index();
