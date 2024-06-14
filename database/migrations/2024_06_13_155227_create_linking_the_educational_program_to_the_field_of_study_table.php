@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_educational_program_to_the_field_of_study', function (Blueprint $table) {
-            $table->integer('id программы');
-            $table->integer('id направления');
+            $table->integer('Program_ID');
+            $table->integer('direction_ID');
         });
     }
 
