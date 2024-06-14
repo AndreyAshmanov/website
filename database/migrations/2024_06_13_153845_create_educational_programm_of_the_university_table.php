@@ -11,19 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colleges_educational_programm', function (Blueprint $table) {
+        Schema::create('educational_programm_of_the_university', function (Blueprint $table) {
             $table->id()->index();
             $table->boolean('The_form_of_education');
             $table->boolean('Cost/Budget');
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
-            $table->integer('The_average_score_for_admission');
-            $table->integer('College_sites_id');
-            $table->integer('Budget_place_Id1')->index();
-            $table->integer('Training_FORM_ID')->index();
-            $table->integer('College_SITES_ID1')->index();
-            $table->integer('LinkingProg/EG_ID_program')->index();
-            $table->integer('BindingProg/EG_ID_direction')->index();
+            $table->integer('Budget_place_Id')->index();
+            $table->integer('LinkingProg/eg_ID_of_program')->index();
+            $table->integer('BindingProg/eg_ID_direction')->index();
+            $table->integer('LinkingProg/EX_ID_of_program')->index();
+            $table->integer('LinkingProg/EX_ID_of_exam')->index();
         });
     }
 
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('colleges_educational_programm');
+        Schema::dropIfExists('educational_programm_of_the_university');
     }
 };
