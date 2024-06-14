@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('colleges_educational_programm', function (Blueprint $table) {
             $table->id();
-            $table->boolean('Форма обучения');
-            $table->boolean('Стоимость/бюджет');
-            $table->integer('Бюджетные места');
-            $table->integer('Количество платных мест');
-            $table->integer('Средний балл для поступления');
-            $table->integer('Площадки колледжей_Id');
-            $table->integer('Блюджетные места_Id1');
-            $table->integer('Форма обучения_Id');
-            $table->integer('Площадки колледжей_Id1');
-            $table->integer('Привязка Прог/напр_Id программы');
-            $table->integer('Привязка Прог/напр_id направления');
+            $table->boolean('The_form_of_education');
+            $table->boolean('Cost/Budget');
+            $table->integer('Budget_places');
+            $table->integer('Number_of_paid_seats');
+            $table->integer('The_average_score_for_admission');
+            $table->integer('College_sites_id');
+            $table->integer('Budget_place_Id1');
+            $table->integer('Training_FORM_ID');
+            $table->integer('College_SITES_ID1');
+            $table->integer('Linking the Program/EG_ID of the program');
+            $table->integer('Binding of the Prog/EG_id of the direction');
         });
     }
 
