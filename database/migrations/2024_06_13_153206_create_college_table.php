@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('Address', 45);
             $table->integer('Rating');
             $table->string('Description', 150);
-            $table->integer('Linking the university to the site of the university');
-            $table->integer('Linking the university to the site ID of the site');
+            $table->integer('Linking_the_university_to_the_site_of_the_university');
+            $table->integer('Linking_the_university_to_the_site_ID_of_the_site');
         });
     }
 
