@@ -22,8 +22,8 @@ return new class extends Migration
             $table->integer('Budget_place_Id1')->index();
             $table->integer('Training_FORM_ID')->index();
             $table->integer('College_SITES_ID1')->index();
-            $table->integer('LinkingProg/EG_ID_program')->index();
-            $table->integer('BindingProg/EG_ID_direction')->index();
+            $table->integer('LinkingProg/ex_ID_program')->index();
+            $table->integer('BindingProg/ex_ID_direction')->index();
         });
     }
 
