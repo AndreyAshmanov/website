@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('the_fotm_of_education', function (Blueprint $table) {
             $table->id();
-            $table->integer('Очно');
-            $table->integer('Заочно');
+            $table->integer('In_person');
+            $table->integer('In_absentia');
         });
     }
 
