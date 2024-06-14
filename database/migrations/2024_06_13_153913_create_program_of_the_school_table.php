@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('educational_programm_of_the_school', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
             $table->boolean('The_form_of_education');
             $table->boolean('Paid/Free');
             $table->integer('Cost');
             $table->integer('Number_of_seats');
-            $table->integer('School_sites_id');
-            $table->integer('Training_FORM_ID');
+            $table->integer('School_sites_id')->index();
+            $table->integer('Training_FORM_ID')->index();
         });
     }
 
