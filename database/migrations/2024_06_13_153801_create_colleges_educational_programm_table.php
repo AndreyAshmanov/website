@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('Budget_place_Id1')->index();
             $table->integer('Training_FORM_ID')->index();
             $table->integer('College_SITES_ID1')->index();
-            $table->integer('LinkingProg/egIDprogram')->index();
+            $table->integer('LinkingProg/egIDprog')->index();
             $table->integer('BindingProg/egIDdirection')->index();
         });
     }
