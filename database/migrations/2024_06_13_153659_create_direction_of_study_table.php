@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name', 45);
             $table->integer('Duration of study (years)');
-            $table->integer('Linking the Program/EG_ID of the program');
-            $table->integer('Binding of the Prog/eg_id of the direction');
+            $table->integer('Linking_the_Program/EG_ID_of_the_program');
+            $table->integer('Binding_of_the_Prog/EG_id_of_the_direction');
         });
     }
 
