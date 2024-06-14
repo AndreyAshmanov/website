@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('school', function (Blueprint $table) {
             $table->id();
-            $table->string('Название', 45);
-            $table->string('Адрес', 45);
-            $table->integer('Рейтинг');
-            $table->string('Описание', 150);
-            $table->integer('Привязка школы к площадке_Id школы');
-            $table->integer('Привязка школы к площадке_Id площадки');
+            $table->string('name', 45);
+            $table->string('Address', 45);
+            $table->integer('Rating');
+            $table->string('Description', 150);
+            $table->integer('Linking_a_school_to_a_school_id_site');
+            $table->integer('Linking_the_school_to_the_site_ID_of_the_site');
         });
     }
 
