@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('_prog_binding_eg', function (Blueprint $table) {
-            $table->integer('Id программы');
-            $table->integer('id направления');
+            $table->integer('Program_ID');
+            $table->integer('direction_ID');
         });
     }
 
