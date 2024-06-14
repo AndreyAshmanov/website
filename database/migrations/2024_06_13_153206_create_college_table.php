@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('college', function (Blueprint $table) {
             $table->id();
-            $table->string('Название', 45);
-            $table->string('Адрес', 45);
-            $table->integer('Рейтинг');
-            $table->string('Описание', 150);
-            $table->integer('Привязка вуза к площадке_Id вуза');
-            $table->integer('Привязка вуза к площадке_Id площадки');
+            $table->string('name', 45);
+            $table->string('Address', 45);
+            $table->integer('Rating');
+            $table->string('Description', 150);
+            $table->integer('Linking the university to the site of the university');
+            $table->integer('Linking the university to the site ID of the site');
         });
     }
 
