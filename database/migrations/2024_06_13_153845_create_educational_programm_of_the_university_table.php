@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('educational_programm_of_the_university', function (Blueprint $table) {
             $table->id();
-            $table->boolean('Форма обучения');
-            $table->boolean('Стоимость/бюджет');
-            $table->integer('Бюджетные места');
-            $table->integer('Количество платных мест');
-            $table->integer('Блюджетные места_Id');
-            $table->integer('Привязка Прог/напр_Id программы');
-            $table->integer('Привязка Прог/напр_id направления');
-            $table->integer('Привязка про/ экз_Id программы');
-            $table->integer('Привязка про/ экз_Id экзамена');
+            $table->boolean('The_form_of_education');
+            $table->boolean('Cost/Budget');
+            $table->integer('Budget_places');
+            $table->integer('Number_of_paid_seats');
+            $table->integer('Budget_place_Id');
+            $table->integer('Linking_the_Program/EG_ID_of_the_program');
+            $table->integer('Binding_of_the_Prog/EG_id_of_the_direction');
+            $table->integer('Linking the pro/EX_ID of the program');
+            $table->integer('Linking the pro/EX_ID of the exam');
         });
     }
 
