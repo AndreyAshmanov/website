@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('linking_pro_ex', function (Blueprint $table) {
             $table->integer('Program_ID')->primary();
-            $table->integer('Exam_ID');
+            $table->integer('Exam_ID')->index();
         });
     }
 
