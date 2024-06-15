@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('the_fotm_of_education', function (Blueprint $table) {
+        Schema::create('the_form_of_education', function (Blueprint $table) {
             $table->id();
             $table->integer('In_person');
             $table->integer('In_absentia');
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('the_fotm_of_education');
+        Schema::dropIfExists('the_form_of_education');
     }
 };
