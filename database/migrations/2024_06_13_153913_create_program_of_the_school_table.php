@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('educational_programm_of_the_school', function (Blueprint $table) {
             $table->id()->index();
-            $table->boolean('The_form_of_education');
-            $table->boolean('Paid/Free');
+            $table->boolean('The_form_of_education')->default(true);
+            $table->boolean('Paid/Free')->default(true);
             $table->integer('Cost');
             $table->integer('Number_of_seats');
             $table->integer('School_sites_id')->index();
