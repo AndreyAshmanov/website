@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('linking_the_educational_program_to_the_field_of_study', function (Blueprint $table) {
+        Schema::create('linking_the_educational_program_field_study', function (Blueprint $table) {
             $table->integer('Program_ID')->primary();
             $table->integer('direction_ID')->index();
         });
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('linking_the_educational_program_to_the_field_of_study');
+        Schema::dropIfExists('linking_the_educational_program_field_study');
     }
 };
