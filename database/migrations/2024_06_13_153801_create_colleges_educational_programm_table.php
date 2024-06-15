@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('colleges_educational_programm', function (Blueprint $table) {
             $table->id()->index();
-            $table->boolean('The_form_of_education');
-            $table->boolean('Cost/Budget');
+            $table->boolean('The_form_of_education')->default(true);
+            $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
             $table->integer('The_average_score_for_admission');
