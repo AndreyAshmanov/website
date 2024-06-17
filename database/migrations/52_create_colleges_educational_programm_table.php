@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('program_of_the_colleges', function (Blueprint $table) {
             $table->id()->index();
             $table->boolean('The_form_of_education')->default(true);
-            $table->boolean('Cost/Budget')->default(true);
+            $table->boolean('Cost/Budget')->default(true)->index();
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
             $table->integer('The_average_score_for_admission');
@@ -31,6 +31,8 @@ return new class extends Migration
             $table->foreign('Budget_place_Id_1')->references('id')->on('budget_places');
 
             $table->foreign('College_sites_id')->references('id')->on('college_sites');
+
+            $table->foreign('The_form_of_education')->references('id')->on('the_form_of_education');
         });
     }
 
