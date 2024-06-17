@@ -17,12 +17,11 @@ return new class extends Migration
             $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
-            $table->unsignedBigInteger('Budget_place_Id')->index();
-            $table->unsignedBigInteger('LinkingProg/EG_ID_program')->index();
-            $table->unsignedBigInteger('LinkingProg/EG_ID_direction')->index();
+            $table->foreignId('Budget_place_Id')->index();
+            $table->foreignId('LinkingProg/EG_ID_program')->index();
+            $table->foreignId('LinkingProg/EG_ID_direction')->index();
             $table->integer('LinkingProg/EX_ID_program')->index();
             $table->integer('LinkingProg/EX_ID_exam')->index();
-            $table->primary(['id', 'LinkingProg/EG_ID_program', 'LinkingProg/EG_ID_direction']);
             $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EX_ID_program')->references('Program_ID')->on('linking_pro_ex');
