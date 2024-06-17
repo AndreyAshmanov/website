@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_university_to_the_site', function (Blueprint $table) {
-            $table->foreignId('university_ID')->index();
+            $table->integer('university_ID')->index();
             $table->foreignId('site_ID')->index();
         });
     }
