@@ -20,8 +20,8 @@ return new class extends Migration
             $table->foreignId('Budget_place_Id')->index();
             $table->foreignId('LinkingProg/EG_ID_program')->index();
             $table->foreignId('LinkingProg/EG_ID_direction')->index();
-            $table->integer('LinkingProg/EX_ID_program')->index();
-            $table->integer('LinkingProg/EX_ID_exam')->index();
+            $table->foreignId('LinkingProg/EX_ID_program')->index();
+            $table->foreignId('LinkingProg/EX_ID_exam')->index();
             $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EX_ID_program')->references('Program_ID')->on('linking_pro_ex');
