@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('prog_binding_eg', function (Blueprint $table) {
-            $table->integer('Program_ID')->primary();
+            $table->integer('Program_ID');
             $table->integer('direction_ID');
+            $table->primary(['Program_ID', 'direction_ID']);
         });
     }
 
