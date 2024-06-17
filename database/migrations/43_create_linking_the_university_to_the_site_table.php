@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('linking_the_university_to_the_site', function (Blueprint $table) {
             $table->unsignedBigInteger('university_ID')->index();
             $table->unsignedBigInteger('site_ID')->index();
-            $table->primary(['university_ID', 'site_ID']);
         });
     }
 
