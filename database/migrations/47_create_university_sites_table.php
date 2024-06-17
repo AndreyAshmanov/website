@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name', 45);
             $table->integer('Linking_university_site_ID_university')->index();
             $table->integer('Linking_university_site_ID_site')->index();
+            $table->primary(['id', 'Linking_university_site_ID_university', 'Linking_university_site_ID_site']);
+            
         });
     }
 
