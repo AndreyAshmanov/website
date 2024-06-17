@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_program_to_the_exam', function (Blueprint $table) {
-            $table->integer('Program_ID')->primary()->index();
+            $table->integer('Program_ID')->index();
             $table->integer('Exam_ID')->index();
             $table->integer('The_Universitys_educational_program_id');
+            $table->primary(['Program_ID', 'Exam_ID']);
         });
     }
 
