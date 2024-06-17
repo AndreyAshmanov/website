@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('university_sites', function (Blueprint $table) {
             $table->id()->index();
             $table->string('name', 45);
-            $table->unsignedBigInteger('Linking_university_site_ID_university')->index();
-            $table->unsignedBigInteger('Linking_university_site_ID_site')->index();
-            $table->foreign('Linking_university_site_ID_university')->references('university_ID')->on('linking_the_university_to_the_site');
-            $table->foreign('Linking_university_site_ID_site')->references('site_ID')->on('linking_the_university_to_the_site');
+            $table->integer('Linking_university_site_ID_university')->index();
+            $table->integer('Linking_university_site_ID_site')->index();
         });
     }
 
