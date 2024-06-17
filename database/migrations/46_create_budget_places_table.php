@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('budget_places', function (Blueprint $table) {
-            $table->id('id');
+            $table->id();
             $table->integer('Present');
             $table->integer('Missing');
         });
