@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_program_to_the_direction', function (Blueprint $table) {
-            $table->unsignedBigInteger('Program_ID')->index();
-            $table->unsignedBigInteger('direction_ID')->index();
+            $table->foreignId('Program_ID')->index();
+            $table->foreignId('direction_ID')->index();
         });
     }
 
