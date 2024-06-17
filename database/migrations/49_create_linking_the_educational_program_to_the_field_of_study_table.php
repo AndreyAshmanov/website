@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('linking_the_educational_program_field_study', function (Blueprint $table) {
             $table->integer('Program_ID');
             $table->integer('direction_ID');
-            $table->primary(['Program_ID', 'direction_ID']);
         });
     }
 
