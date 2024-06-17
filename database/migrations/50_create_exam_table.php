@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer('Passing_score');
             $table->integer('Minimum_score');
             $table->boolean('Is_it_possible_to_take_an_internal_exam')->default(true);
-            $table->integer('LinkingProg/EX_ID_program')->index();
-            $table->integer('LinkingProg/EX_ID_exam')->index();
+            $table->foreignId('LinkingProg/EX_ID_program')->index();
+            $table->foreignId('LinkingProg/EX_ID_exam')->index();
             $table->foreign('LinkingProg/EX_ID_program')->references('Program_ID')->on('linking_pro_ex');
             $table->foreign('LinkingProg/EX_ID_exam')->references('Exam_ID')->on('linking_pro_ex');
         });
