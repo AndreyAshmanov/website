@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('Number_of_paid_seats');
             $table->integer('The_average_score_for_admission');
             $table->integer('College_sites_id');
-            $table->integer('Budget_place_Id1')->index();
+            $table->integer('Budget_place_Id_1')->index();
             $table->integer('Training_FORM_ID')->index();
             $table->integer('College_SITES_ID1')->index();
             $table->integer('Binding_Prog_eg_id_programm')->index();
