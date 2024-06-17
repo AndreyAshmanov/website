@@ -18,15 +18,15 @@ return new class extends Migration
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
             $table->unsignedBigInteger('Budget_place_Id')->index();
-            $table->integer('LinkingProg/EG_ID_programm')->index();
-            $table->integer('LinkingProg/EG_ID_direction')->index();
-
+            $table->unsignedBigInteger('LinkingProg/EG_ID_program')->index();
+            $table->unsignedBigInteger('LinkingProg/EG_ID_direction')->index();
             $table->integer('LinkingProg/EX_ID_program')->index();
             $table->integer('LinkingProg/EX_ID_exam')->index();
-
+            $table->primary(['id', 'LinkingProg/EG_ID_program', 'LinkingProg/EG_ID_direction']);
+            $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
+            $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EX_ID_program')->references('Program_ID')->on('linking_pro_ex');
             $table->foreign('LinkingProg/EX_ID_exam')->references('Exam_ID')->on('linking_pro_ex');
-
             $table->foreign('Budget_place_Id')->references('id')->on('budget_places');
             $table->foreign('id')->references('id')->on('university_sites');
         });
