@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('school_sites', function (Blueprint $table) {
             $table->id()->index();
             $table->string('name', 45);
-            $table->integer('Linking_university_school_ID_site')->index();
-            $table->integer('Linking_university_site_ID_site')->index();
+            $table->integer('Linking_school_school_ID_site')->index();
+            $table->integer('Linking_school_site_ID_site')->index();
         });
     }
 
