@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_university_to_the_site', function (Blueprint $table) {
-            $table->unsignedBigInteger('university_ID')->index();
-            $table->unsignedBigInteger('site_ID')->index();
+            $table->foreignId('university_ID')->index();
+            $table->foreignId('site_ID')->index();
         });
     }
 
