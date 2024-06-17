@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colleges_educational_programm', function (Blueprint $table) {
+        Schema::create('colleges_educational', function (Blueprint $table) {
             $table->id()->index();
             $table->boolean('The_form_of_education')->default(true);
             $table->boolean('Cost/Budget')->default(true);
@@ -27,8 +27,8 @@ return new class extends Migration
 
             $table->primary(['id', 'LinkingProg/EG_ID_programm', 'LinkingProg/EG_ID_direction']);
 
-            $table->foreign('LinkingProg/EG_ID_programm')->references('Program_ID')->on('linking_to_the_direction');
-            $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_to_the_direction');
+            // $table->foreign('LinkingProg/EG_ID_programm')->references('Program_ID')->on('linking_the_program_to_the_direction');
+            // $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
         });
     }
 
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('colleges_educational_programm');
+        Schema::dropIfExists('colleges_educational');
     }
 };
