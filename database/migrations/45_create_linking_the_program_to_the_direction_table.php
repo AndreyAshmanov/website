@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('linking_the_program_to_the_direction', function (Blueprint $table) {
             $table->unsignedBigInteger('Program_ID')->index();
             $table->unsignedBigInteger('direction_ID')->index();
-            $table->primary(['Program_ID', 'direction_ID']);
         });
     }
 
