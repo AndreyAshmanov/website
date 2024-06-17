@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('linking_pro_ex', function (Blueprint $table) {
             $table->integer('Program_ID')->primary();
             $table->integer('Exam_ID')->index();
+            $table->foreign('Program_ID')->references('LinkingProg/EX_ID_program')->on('program_of_the_university');
+            $table->foreign('Exam_ID')->references('LinkingProg/EX_ID_exam')->on('program_of_the_university');
         });
     }
 
