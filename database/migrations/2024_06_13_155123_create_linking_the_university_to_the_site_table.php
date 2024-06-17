@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('linking_the_university_to_the_site', function (Blueprint $table) {
             $table->integer('university_ID')->primary();
-            $table->integer('site_ID')->index();
+            $table->integer('site_ID');
         });
     }
 
