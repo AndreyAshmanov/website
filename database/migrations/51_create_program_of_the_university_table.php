@@ -22,6 +22,8 @@ return new class extends Migration
             $table->integer('Binding_Prog_eg_id_direction')->index();
             $table->integer('LinkingProg/EX_ID_program')->index();
             $table->integer('LinkingProg/EX_ID_exam')->index();
+            $table->foreign('LinkingProg/EX_ID_program')->references('Program_ID')->on('linking_pro_ex');
+            $table->foreign('LinkingProg/EX_ID_exam')->references('Exam_ID')->on('linking_pro_ex');
             $table->foreign('Budget_place_Id')->references('id')->on('budget_places');
         });
     }
