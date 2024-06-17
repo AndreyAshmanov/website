@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name', 45);
             $table->integer('Duration of study (years)');
             $table->unsignedBigInteger('LinkingProg/EG_ID_program')->index();
-            $table->unsignedBigInteger('BindingProg/EG_ID_direction')->index();
-            $table->primary(['id', 'LinkingProg/EG_ID_program', 'BindingProg/EG_ID_direction']);
+            $table->unsignedBigInteger('LinkingProg/EG_ID_direction')->index();
+            $table->primary(['id', 'LinkingProg/EG_ID_program', 'LinkingProg/EG_ID_direction']);
             $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
         });
