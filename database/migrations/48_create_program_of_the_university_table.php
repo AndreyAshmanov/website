@@ -17,11 +17,12 @@ return new class extends Migration
             $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
-            $table->integer('Budget_place_Id')->index();
+            $table->unsignedBigInteger('Budget_place_Id')->index();
             $table->integer('Binding_Prog_eg_id_programm')->index();
             $table->integer('Binding_Prog_eg_id_direction')->index();
             $table->integer('LinkingProg/EX_ID_program')->index();
             $table->integer('LinkingProg/EX_ID_exam')->index();
+            $table->foreign('Budget_place_Id')->references('id')->on('budget_places');
         });
     }
 
