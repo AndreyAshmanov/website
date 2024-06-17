@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('prog_binding_eg', function (Blueprint $table) {
             $table->integer('Program_ID')->primary();
-            $table->integer('direction_ID')->index();
+            $table->integer('direction_ID');
         });
     }
 
