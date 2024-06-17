@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('program_of_the_university', function (Blueprint $table) {
-            $table->id()->index();
+            $table->id();
             $table->boolean('The_form_of_education')->default(true);
             $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');

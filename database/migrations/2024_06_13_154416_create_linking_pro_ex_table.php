@@ -15,8 +15,6 @@ return new class extends Migration
             $table->integer('Program_ID');
             $table->integer('Exam_ID')->index();
             $table->primary(['Program_ID']);
-            $table->foreign('Program_ID')->references('LinkingProg/EX_ID_program')->on('program_of_the_university');
-            $table->foreign('Exam_ID')->references('LinkingProg/EX_ID_exam')->on('program_of_the_university');
         });
     }
 
