@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_pro_ex', function (Blueprint $table) {
-            $table->integer('Program_ID');
+            $table->integer('Program_ID')->primary();
             $table->integer('Exam_ID')->index();
-            $table->primary(['Program_ID']);
         });
     }
 
