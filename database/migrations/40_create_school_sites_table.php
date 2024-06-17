@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('name', 45);
             $table->foreignId('Linking_school_school_ID_site')->index();
             $table->foreignId('Linking_school_site_ID_site')->index();
+
+            $table->foreign('Linking_school_school_ID_site')->references('school_ID')->on('linking_the_school_to_the_site');
+            $table->foreign('Linking_school_site_ID_site')->references('site_ID')->on('linking_the_school_to_the_site');
         });
     }
 
