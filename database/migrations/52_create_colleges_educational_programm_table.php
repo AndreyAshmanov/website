@@ -22,11 +22,13 @@ return new class extends Migration
             $table->integer('Budget_place_Id_1')->index();
             $table->integer('Training_FORM_ID')->index();
             $table->integer('College_SITES_ID_1')->index();
-            $table->integer('LinkingProg/EG_ID_programm')->index();
-            $table->integer('LinkingProg/EG_ID_direction')->index();
+            $table->unsignedBigInteger('LinkingProg/EG_ID_programm')->index();
+            $table->unsignedBigInteger('LinkingProg/EG_ID_direction')->index();
 
-            $table->foreign('LinkingProg/EG_ID_programm')->references('Program_ID')->on('linking_the_program_to_the_direction');
-            $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
+            $table->primary(['id', 'LinkingProg/EG_ID_programm', 'LinkingProg/EG_ID_direction']);
+
+            $table->foreign('LinkingProg/EG_ID_programm')->references('Program_ID')->on('linking_to_the_direction');
+            $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_to_the_direction');
         });
     }
 
