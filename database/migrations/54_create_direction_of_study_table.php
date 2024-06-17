@@ -17,7 +17,6 @@ return new class extends Migration
             $table->integer('Duration of study (years)');
             $table->foreignId('LinkingProg/EG_ID_program')->index();
             $table->foreignId('LinkingProg/EG_ID_direction')->index();
-            $table->primary(['id', 'LinkingProg/EG_ID_program', 'LinkingProg/EG_ID_direction']);
             $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
         });
