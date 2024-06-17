@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_school_to_the_site', function (Blueprint $table) {
-            $table->integer('school_ID');
-            $table->integer('site_ID');
-            $table->primary(['school_ID', 'site_ID']);
+            $table->integer('school_ID')->primary();
+            $table->foreignId('site_ID');
         });
     }
 
