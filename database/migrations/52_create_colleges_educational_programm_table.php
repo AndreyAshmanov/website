@@ -24,7 +24,6 @@ return new class extends Migration
             $table->integer('College_SITES_ID1')->index();
             $table->integer('Binding_Prog_eg_id_programm')->index();
             $table->integer('Binding_Prog_eg_id_direction')->index();
-            $table->foreign('Budget_place_Id1')->references('id')->on('budget_places');
         });
     }
 
