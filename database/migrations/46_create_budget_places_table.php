@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('budget_places', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->primary();
+            $table->id('id');
             $table->integer('Present');
             $table->integer('Missing');
         });
