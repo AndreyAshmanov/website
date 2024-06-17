@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('the_form_of_education', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('In_person');
-            $table->unsignedBigInteger('In_absentia');
+            $table->foreignId('In_person');
+            $table->foreignId('In_absentia');
         });
     }
 
