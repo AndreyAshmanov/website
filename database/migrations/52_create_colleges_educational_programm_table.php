@@ -18,12 +18,12 @@ return new class extends Migration
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
             $table->integer('The_average_score_for_admission');
-            $table->unsignedBigInteger('College_sites_id');
-            $table->unsignedBigInteger('Budget_place_Id_1')->index();
+            $table->foreignId('College_sites_id');
+            $table->foreignId('Budget_place_Id_1')->index();
             $table->integer('Training_FORM_ID')->index();
             $table->integer('College_SITES_ID_1')->index();
-            $table->unsignedBigInteger('LinkingProg/EG_ID_program')->index();
-            $table->unsignedBigInteger('LinkingProg/EG_ID_direction')->index();
+            $table->foreignId('LinkingProg/EG_ID_program')->index();
+            $table->foreignId('LinkingProg/EG_ID_direction')->index();
 
             $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
             $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
