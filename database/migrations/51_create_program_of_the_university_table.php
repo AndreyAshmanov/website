@@ -17,6 +17,7 @@ return new class extends Migration
             $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
+            $table->foreignId('University_sites_id');
             $table->foreignId('Budget_place_Id')->index();
             $table->foreignId('LinkingProg/EG_ID_program')->index();
             $table->foreignId('LinkingProg/EG_ID_direction')->index();
@@ -27,7 +28,7 @@ return new class extends Migration
             $table->foreign('LinkingProg/EX_ID_program')->references('Program_ID')->on('linking_pro_ex');
             $table->foreign('LinkingProg/EX_ID_exam')->references('Exam_ID')->on('linking_pro_ex');
             $table->foreign('Budget_place_Id')->references('id')->on('budget_places');
-            $table->foreign('id')->references('id')->on('university_sites');
+            $table->foreign('University_sites_id')->references('id')->on('university_sites');
         });
     }
 
