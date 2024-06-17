@@ -17,8 +17,10 @@ return new class extends Migration
             $table->boolean('Paid/Free')->default(true);
             $table->integer('Cost');
             $table->integer('Number_of_seats');
-            $table->integer('School_sites_id')->index();
+            $table->foreignId('School_sites_id')->index();
             $table->integer('Training_FORM_ID')->index();
+
+            $table->foreign('School_sites_id')->references('id')->on('school_sites');
         });
     }
 
