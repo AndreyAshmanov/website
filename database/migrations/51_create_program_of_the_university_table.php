@@ -18,8 +18,8 @@ return new class extends Migration
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
             $table->unsignedBigInteger('Budget_place_Id')->index();
-            $table->integer('Binding_Prog_eg_id_programm')->index();
-            $table->integer('Binding_Prog_eg_id_direction')->index();
+            $table->integer('LinkingProg/EG_ID_programm')->index();
+            $table->integer('LinkingProg/EG_ID_direction')->index();
 
             $table->integer('LinkingProg/EX_ID_program')->index();
             $table->integer('LinkingProg/EX_ID_exam')->index();
