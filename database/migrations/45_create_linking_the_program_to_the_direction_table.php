@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('linking_the_program_to_the_direction', function (Blueprint $table) {
-            $table->foreignId('Program_ID')->index();
+            $table->integer('Program_ID')->index();
             $table->foreignId('direction_ID')->index();
         });
     }
