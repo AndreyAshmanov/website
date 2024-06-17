@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colleges_educational', function (Blueprint $table) {
+        Schema::create('program_of_the_colleges', function (Blueprint $table) {
             $table->id()->index();
             $table->boolean('The_form_of_education')->default(true);
             $table->boolean('Cost/Budget')->default(true);
@@ -22,13 +22,13 @@ return new class extends Migration
             $table->integer('Budget_place_Id_1')->index();
             $table->integer('Training_FORM_ID')->index();
             $table->integer('College_SITES_ID_1')->index();
-            $table->unsignedBigInteger('LinkingProg/EG_ID_programm')->index();
+            $table->unsignedBigInteger('LinkingProg/EG_ID_program')->index();
             $table->unsignedBigInteger('LinkingProg/EG_ID_direction')->index();
 
-            $table->primary(['id', 'LinkingProg/EG_ID_programm', 'LinkingProg/EG_ID_direction']);
+            $table->primary(['id', 'LinkingProg/EG_ID_program', 'LinkingProg/EG_ID_direction']);
 
-            // $table->foreign('LinkingProg/EG_ID_programm')->references('Program_ID')->on('linking_the_program_to_the_direction');
-            // $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
+            $table->foreign('LinkingProg/EG_ID_program')->references('Program_ID')->on('linking_the_program_to_the_direction');
+            $table->foreign('LinkingProg/EG_ID_direction')->references('direction_ID')->on('linking_the_program_to_the_direction');
         });
     }
 
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('colleges_educational');
+        Schema::dropIfExists('program_of_the_colleges');
     }
 };
