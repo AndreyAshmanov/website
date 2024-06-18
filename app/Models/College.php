@@ -1,5 +1,10 @@
 <?php
-use Illuminate\\Eloquent\\Model;
+
+namespace App\Models;
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
 
 class CollegeSite extends
 {
