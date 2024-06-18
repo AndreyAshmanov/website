@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('program_of_the_colleges', function (Blueprint $table) {
-            $table->id()->index();
-            $table->boolean('The_form_of_education')->default(true)->index();
+            $table->id();
+            $table->foreignId('The_form_of_education');
             $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
