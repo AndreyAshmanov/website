@@ -32,6 +32,8 @@ return new class extends Migration
 
             $table->foreign('College_sites_id')->references('id')->on('college_sites');
 
+            $table->foreign('The_form_of_education')->references('id')->on('the_form_of_education');
+
             // $table->foreign('The_form_of_education')->references('id')->on('the_form_of_education');
         });
     }
