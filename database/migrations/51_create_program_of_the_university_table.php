@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('program_of_the_university', function (Blueprint $table) {
             $table->id();
-            $table->boolean('The_form_of_education')->default(true);
+            $table->foreignId('The_form_of_education');
             $table->boolean('Cost/Budget')->default(true);
             $table->integer('Budget_places');
             $table->integer('Number_of_paid_seats');
