@@ -6,7 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CollegeSite extends
+class CollegeSite extends Model
 {
     protected $table = 'college';
     protected $fillable = [
